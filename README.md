@@ -1,5 +1,19 @@
 # Customer Churn Prediction Pipeline with PySpark
 
+<div align="center">
+
+![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
+![PySpark](https://img.shields.io/badge/PySpark-%23E25A1C.svg?style=for-the-badge&logo=apache-spark&logoColor=white)
+![Big Data](https://img.shields.io/badge/Big%20Data-blue?style=for-the-badge)
+![Data Engineering](https://img.shields.io/badge/Data%20Engineering-gray?style=for-the-badge)
+
+![Machine Learning](https://img.shields.io/badge/Machine%20Learning-blueviolet?style=for-the-badge)
+![MLOps](https://img.shields.io/badge/MLOps-success?style=for-the-badge)
+![ETL Pipeline](https://img.shields.io/badge/ETL%20Pipeline-lightgrey?style=for-the-badge)
+![Customer Churn](https://img.shields.io/badge/Domain-Customer%20Churn-red?style=for-the-badge)
+
+</div>
+
 A **production-grade, distributed machine learning pipeline** for predicting customer churn using **Apache Spark (PySpark)**.  
 This project demonstrates **modular software engineering**, **robust ETL**, and **hyperparameter optimization** using cross-validation at scale.
 
