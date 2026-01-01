@@ -74,12 +74,10 @@ churn_spark_pipeline/
 ```
 
 ## 🛠️ Installation & Setup
-### Prerequisites
-    - Python: 3.10 or 3.11
-
-    - Python 3.13 is not compatible with PySpark 3.4
-
-    - Java: 11 (required for Spark JVM backend)
+**Prerequisites**
+  - Python: 3.10 or 3.11
+  - Python 3.13 is not compatible with PySpark 3.4
+  - Java: 11 (required for Spark JVM backend)
 
 1. Clone Repository & Create Virtual Environment
 ```
@@ -177,11 +175,12 @@ Customers with "Month-to-month" contracts show a drastically higher churn rate c
 ![Churn Distribution by Contract Type](assets/churn_by_contract_type.png)
 
 ### Key Business Insights
-    - Month-to-month contracts have significantly higher churn
+  
+  - Month-to-month contracts have significantly higher churn
 
-    - Fiber Optic users churn more than DSL users
+  - Fiber Optic users churn more than DSL users
 
-    - Electronic Check payment method is strongly correlated with churn
+  - Electronic Check payment method is strongly correlated with churn
 
 ## 📌 Notes
 Designed for local Spark execution and cluster deployment
