@@ -114,37 +114,37 @@ python main.py
 ### Pipeline Workflow
 1. Data Ingestion
 
-    - Reads CSV with enforced schema
+  - Reads CSV with enforced schema
 
 2. Data Cleaning
+  
+  - Casts `TotalCharges` to `Double`
 
-    - Casts `TotalCharges` to `Double`
+  - Handles whitespace and invalid values
 
-    - Handles whitespace and invalid values
-
-    - Imputes missing values
+  - Imputes missing values
 
 3. Train/Test Split
 
-    - Stratified split: 80% Train / 20% Test
+  - Stratified split: 80% Train / 20% Test
 
 4. Model Tuning
 
-    - Logistic Regression
+  - Logistic Regression
 
-    - 3-Fold Cross-Validation
+  - 3-Fold Cross-Validation
 
-    - Grid search over:
+  - Grid search over:
 
-        - `regParam`
+    - `regParam`
 
-        - `elasticNetParam`
+    - `elasticNetParam`
 
 5. Evaluation
 
-    - Computes AUC
+  - Computes AUC
 
-    - Saves predictions to `output/`
+  - Saves predictions to `output/`
 
 ## 📊 Model Performance
 The pipeline automatically selects optimal hyperparameters.
