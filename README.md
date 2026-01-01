@@ -75,11 +75,11 @@ churn_spark_pipeline/
 
 ## 🛠️ Installation & Setup
 ### Prerequisites
-Python: 3.10 or 3.11
+    - Python: 3.10 or 3.11
 
-Python 3.13 is not compatible with PySpark 3.4
+    - Python 3.13 is not compatible with PySpark 3.4
 
-Java: 11 (required for Spark JVM backend)
+    - Java: 11 (required for Spark JVM backend)
 
 1. Clone Repository & Create Virtual Environment
 ```
@@ -116,37 +116,37 @@ python main.py
 ### Pipeline Workflow
 1. Data Ingestion
 
-- Reads CSV with enforced schema
+    - Reads CSV with enforced schema
 
 2. Data Cleaning
 
-- Casts `TotalCharges` to `Double`
+    - Casts `TotalCharges` to `Double`
 
-- Handles whitespace and invalid values
+    - Handles whitespace and invalid values
 
-- Imputes missing values
+    - Imputes missing values
 
 3. Train/Test Split
 
-- Stratified split: 80% Train / 20% Test
+    - Stratified split: 80% Train / 20% Test
 
 4. Model Tuning
 
-- Logistic Regression
+    - Logistic Regression
 
-- 3-Fold Cross-Validation
+    - 3-Fold Cross-Validation
 
-- Grid search over:
+    - Grid search over:
 
-    - `regParam`
+        - `regParam`
 
-    - `elasticNetParam`
+        - `elasticNetParam`
 
 5. Evaluation
 
-- Computes AUC
+    - Computes AUC
 
-- Saves predictions to `output/`
+    - Saves predictions to `output/`
 
 ## 📊 Model Performance
 The pipeline automatically selects optimal hyperparameters.
@@ -177,11 +177,11 @@ Customers with "Month-to-month" contracts show a drastically higher churn rate c
 ![Churn Distribution by Contract Type](assets/churn_by_contract_type.png)
 
 ### Key Business Insights
-Month-to-month contracts have significantly higher churn
+    - Month-to-month contracts have significantly higher churn
 
-Fiber Optic users churn more than DSL users
+    - Fiber Optic users churn more than DSL users
 
-Electronic Check payment method is strongly correlated with churn
+    - Electronic Check payment method is strongly correlated with churn
 
 ## 📌 Notes
 Designed for local Spark execution and cluster deployment
