@@ -1,0 +1,25 @@
+# Python boilerplate
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+.env
+
+# VS Code settings
+.vscode/
+
+# Project Specific - Data & Outputs
+# (Never commit large datasets or binary models to standard Git)
+data/
+models/
+output/
+
+# PySpark Local Artifacts
+# Spark creates these folders when running locally
+spark-warehouse/
+metastore_db/
+derby.log
