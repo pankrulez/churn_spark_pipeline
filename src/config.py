@@ -1,27 +1,34 @@
-# src/config.py
+# config.py
+import os
+from pathlib import Path
 
-# File Paths
-INPUT_PATH = "data/WA_Fn-UseC_-Telco-Customer-Churn.csv"
-OUTPUT_MODEL_PATH = "models/churn_logistic_regression"
-OUTPUT_PREDICTIONS = "output/churn_predictions"
+BASE_DIR = Path(__file__).resolve().parent
 
-# App Name
-APP_NAME = "TelcoChurnPrediction_Expert"
+# Environment
+ENV = os.getenv("ENV", "local")
 
-# Schema Constants (Good practice to avoid typo errors)
-LABEL_COL = "Churn"
-ID_COL = "customerID"
-NUMERICAL_COLS = ["tenure", "MonthlyCharges", "TotalCharges"]
-CATEGORICAL_COLS = [
-    "gender", "SeniorCitizen", "Partner", "Dependents", 
-    "PhoneService", "MultipleLines", "InternetService", 
-    "OnlineSecurity", "OnlineBackup", "DeviceProtection", 
-    "TechSupport", "StreamingTV", "StreamingMovies", 
-    "Contract", "PaperlessBilling", "PaymentMethod"
-]
+# Storage paths (local or S3-ready)
+RAW_DATA_PATH = os.getenv(
+    "RAW_DATA_PATH",
+    str(BASE_DIR / "data" / "raw" / "telco_churn.csv")
+)
 
-# output model path
-OUTPUT_MODEL_PATH = "models/churn_logistic_regression"
+STAGING_PATH = os.getenv(
+    "STAGING_PATH",
+    str(BASE_DIR / "data" / "staging")
+)
 
-# output predictions path
-OUTPUT_PREDICTIONS = "output/churn_predictions"
+PROCESSED_PATH = os.getenv(
+    "PROCESSED_PATH",
+    str(BASE_DIR / "data" / "processed")
+)
+
+MODEL_OUTPUT_PATH = os.getenv(
+    "MODEL_OUTPUT_PATH",
+    str(BASE_DIR / "models")
+)
+
+MLFLOW_TRACKING_URI = os.getenv(
+    "MLFLOW_TRACKING_URI",
+    "http://localhost:5000"
+)
